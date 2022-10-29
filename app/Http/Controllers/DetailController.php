@@ -20,6 +20,7 @@ class DetailController extends Controller
             "backend" => true,
             "age" => 23,
             "bio" => "I am a fullstack web developer"
-        ]);
+        ])->header("Access-Control-Allow-Origin", config('cors.allowed_origins'))
+            ->header("Access-Control-Allow-Methods", config('cors.allowed_methods'));
     }
 }

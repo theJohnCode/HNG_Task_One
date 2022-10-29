@@ -3,8 +3,6 @@
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use Illuminate\Http\Middleware\HandleCors;
-
 class Kernel extends HttpKernel
 {
     /**
@@ -15,9 +13,8 @@ class Kernel extends HttpKernel
      * @var array<int, class-string|string>
      */
     protected $middleware = [
-        HandleCors::class,
         // \App\Http\Middleware\TrustHosts::class,
-        // \Fruitcake\Cors\HandleCors::class,
+        \Fruitcake\Cors\HandleCors::class,
         \App\Http\Middleware\TrustProxies::class,
         \Illuminate\Http\Middleware\HandleCors::class,
         \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
