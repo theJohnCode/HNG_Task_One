@@ -12,14 +12,14 @@ class DetailController extends Controller
 {
     public function index()
     {
-        $detail = Detail::find(1);
-     
+        // $detail = Detail::find(1);
+
         // return DetailResource::collection(Detail::all());
         return response()->json([
-            'slackUsername' => $detail->slack_username,
-            'backend' => $detail->backend == 1 ? true : false,
-            'age' => $detail->age,
-            'bio' => $detail->bio,
+            "slackUsername" => "Ifeanyichukwu John",
+            "backend" => true,
+            "age" => 23,
+            "bio" => "I am a fullstack web developer"
         ]);
     }
 }
