@@ -21,4 +21,4 @@ use App\Http\Middleware\ApiMiddleware;
 //     return $request->user();
 // });
 Route::get('/', [DetailController::class, 'index']);
-Route::post('/calculate', [ArithmeticController::class, 'calculate'])->middleware(ApiMiddleware::class);
+Route::post('/calculate', [ArithmeticController::class, 'calculate']);
